@@ -21,9 +21,9 @@ while getopts "p:f:l" OPTION 2> /dev/null; do
 done
 
 if [ -z "$PHP_BINARY" ]; then
-	if [ -f ./bin/php/php ]; then
+	if [ -f ./bin/php7/bin/php ]; then
 		export PHPRC=""
-		PHP_BINARY="./bin/php/php"
+		PHP_BINARY="./bin/php7/bin/php"
 	elif command -v php >/dev/null 2>&1; then
 		PHP_BINARY="$(command -v php)"
 	else
